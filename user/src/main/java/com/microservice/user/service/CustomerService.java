@@ -61,8 +61,6 @@ public class CustomerService {
         //calling account service
         AccountResponseDto accountResponseDto = accountFeignClient.createAccount(accountRequestDto);
         log.info("Account created "+accountResponseDto);
-
-
         return response;
     }
      public CustomerResponseDTO  createAccountFallback(CustomerRequestDto customerRequestDto, Exception e) {
